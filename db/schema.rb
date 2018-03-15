@@ -10,10 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180315073815) do
+ActiveRecord::Schema.define(version: 20180315080802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "developer_language_relations", force: :cascade do |t|
+    t.integer "developer_id"
+    t.integer "language_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "developer_languages", force: :cascade do |t|
+    t.integer "developer_id"
+    t.integer "language_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "developer_programming_language_relations", force: :cascade do |t|
+    t.integer "developer_id"
+    t.integer "programming_language_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "developer_programming_languages", force: :cascade do |t|
+    t.integer "developer_id"
+    t.integer "programming_language_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "developer_programmings", force: :cascade do |t|
+    t.integer "developer_id"
+    t.integer "programming_language_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["developer_id"], name: "index_developer_programmings_on_developer_id"
+    t.index ["programming_language_id"], name: "index_developer_programmings_on_programming_language_id"
+  end
 
   create_table "developers", force: :cascade do |t|
     t.string "email", null: false
