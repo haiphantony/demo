@@ -25,6 +25,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+
+gem 'active_model_serializers'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -43,6 +46,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-alias'
   gem 'pry-rescue'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
 
 end
 
@@ -61,4 +66,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #haipt add new gem
 
 gem 'virtus'
+
 

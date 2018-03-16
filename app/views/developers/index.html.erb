@@ -3,8 +3,6 @@
 <h1>Developers</h1>
 <!-- search -->
 <%= form_for  @developerearchform, url: developers_path, method: :get do |f| %>
-<%= f.label "text" %>
-<%= f.text_field :email %>
 <%= f.label "Language" %>
 <%= f.select(:language_id, Language.pluck(:code, :id), { include_blank: true, select: 3 } ) %>
 <%= f.label "Programing" %>

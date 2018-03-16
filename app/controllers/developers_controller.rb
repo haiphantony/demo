@@ -76,7 +76,7 @@ class DevelopersController < ApplicationController
       if params.empty?
        ''
       end
-      params.require(:developer_search_form ).permit(:email, :language_id, :programming_language_id)
+      params.require(:developer_search_form ).permit(:language_id, :programming_language_id)
 
       #params
       # binding.pry
