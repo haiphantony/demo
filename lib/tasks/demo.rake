@@ -1,12 +1,11 @@
 namespace :demo do
   require 'factory_bot_rails'
   require 'faker'
-  desc "TODO"
+  desc "Faker data"
   task :generatedata, [:number] => :environment do |_,args|
   	#create 100 developer
-  	@args = {}
-  	@args[:number] = (args.number || 1).to_i
-  	@args[:number].times do
+    number = (args.number || 1).to_i
+  	number.times do
   		email = loop do
   			email = Faker::Internet.email
   			break email unless Developer.exists?(email:email)

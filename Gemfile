@@ -67,5 +67,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #haipt add new gem
 
 gem 'virtus'
-
+gem 'bootstrap', '~> 4.0.0'
+#paginate 
+gem 'jquery-rails'
+gem 'kaminari' 
+gem 'bootstrap4-kaminari-views'
 
